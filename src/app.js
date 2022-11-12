@@ -11,6 +11,7 @@ const fetch = (...args) =>
 const mongoose = require("mongoose");
 const config = global.config;
 global.logger = logger;
+global.unix = (time, format = "F") => `<t:${Math.floor(new Date(time).getTime() / 1000)}${format ? `:${format}` : ""}>`;
 const path = require("path");
 const express = require("express"),
   session = require("express-session"),
