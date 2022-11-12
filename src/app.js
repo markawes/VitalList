@@ -158,7 +158,7 @@ app.get(
 
     try {
       fetch(
-        `https://discordapp.com/api/v8/guilds/${config.guilds.main}/members/${req.user.id}`,
+        `https://discord.com/api/v10/guilds/${config.guilds.main}/members/${req.user.id}`,
         {
           method: "PUT",
           body: JSON.stringify({
